@@ -45,8 +45,23 @@ for (let i = 0; i < buttonValues.length; i++) {
                     let numB = Number(B);
 
                     if (operator === "÷"){
+                        if (numB === 0){
+                            display.value = "Error!!"
+                        }
+                        else{
                         display.value = numA/numB;
+                        }
                     }
+                    else if (operator === "x") {
+                        display.value = numA*numB;
+                    }
+                    else if (operator === "-") {
+                        display.value = numA-numB;
+                    }
+                    else if (operator === "+") {
+                        display.value = numA + numB;
+                    }
+                    clearAll();
                 }
             }
             else{
