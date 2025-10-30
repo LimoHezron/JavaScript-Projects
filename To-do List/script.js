@@ -23,8 +23,24 @@ items += `<div class="item">
             </div>`
     }
     document.querySelector('.to-do-list').innerHTML = items;
-  
+    deleteListeners();
+    editListners();
+    saveListeners();
+    cancelListeners();
 };
+function deleteListeners(){
+    let deleteBtn = document.querySelectorAll('.deleteBtn')
+    deleteBtn.forEach((db,i)=>{
+        db.addEventListener('click', ()=>{
+            deleteItem(i)
+        })
+    });
+}
+function deleteItem(i){
+    itemsArray.splice(i,1);
+    localStorage.setItem('items',JSON.stringify(itemsArray))
+    location.reload()
+}
 
 
 
