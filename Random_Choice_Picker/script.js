@@ -1,3 +1,4 @@
+
 const tagsEl = document.getElementById('tags')
 const textarea = document.getElementById('textarea')
 
@@ -8,7 +9,7 @@ textarea.addEventListener('keyup', (e) => {
     if(e.key === 'Enter'){
         setTimeout(()=>{
             e.target.value = ''
-        },1000)
+        },200)
         randomSelect()
     }
 })

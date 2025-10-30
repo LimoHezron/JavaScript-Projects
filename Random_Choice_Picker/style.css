@@ -20,6 +20,8 @@ h3{
 }
 .container{
     width: 500px;
+    box-shadow: 3px 3px 5px hsl(212, 93%, 21%);
+
 }
 textarea{
     width: 100%;
